@@ -1,0 +1,4 @@
+	body:before{
+
+		filter:blur(5px);
+	}

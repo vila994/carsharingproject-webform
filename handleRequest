@@ -1,0 +1,33 @@
+function inviaCase(){
+
+	var nome = $('#nomeId').val();
+	var cognome = $('#cognomeId').val();
+	var email = $('#emailId').val();
+	var argomento = $('#argomentoId option:selected').text();
+	var note = $('#noteId').val();
+
+
+	var jsonRequest = {
+
+		
+
+
+	};
+
+
+	$.ajax({
+		url:"/services/data/v43.0/sobjects/case",
+		type: "POST",
+		contentType: "application/json",
+		dataType: "json",
+		data: JSON.stringify(jsonRequest),
+		success: function(result){
+		     alert("Case inserito");
+		},
+		error: function(richiesta,stato,errori){
+			onFailure(errori);
+		}
+	});
+
+
+}
